@@ -1,4 +1,6 @@
 export default function Sketch(p5SketchObject) {
+  p5SketchObject.preload = () => {};
+
   p5SketchObject.setup = () => {
     p5SketchObject.createCanvas(200, 200);
   };
