@@ -1,21 +1,22 @@
-export default function Sketch(p5SketchObject) {
-  p5SketchObject.preload = () => {};
+// p = p5 Sketch Object
+export default function Sketch(p) {
+  p.preload = () => {};
 
-  p5SketchObject.setup = () => {
-    p5SketchObject.createCanvas(
-      p5SketchObject.windowWidth,
-      p5SketchObject.windowHeight
-    );
+  p.setup = () => {
+    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.rectMode(p.CENTER);
+    p.strokeWeight(10);
+    p.background(0);
   };
 
-  p5SketchObject.draw = () => {
-    p5SketchObject.background(0);
-    p5SketchObject.fill(255);
-    p5SketchObject.ellipse(
-      p5SketchObject.windowWidth / 2,
-      p5SketchObject.windowHeight / 2,
-      p5SketchObject.windowWidth / 4,
-      p5SketchObject.windowWidth / 4
-    );
+  p.draw = () => {
+    p.translate(p.width / 2, p.height / 2);
+    p.fill(255, 0, 0);
+    p.rect(0, 0, 500, 500);
+
+    p.push();
+    p.fill(0);
+    p.ellipse(0, 0, 100);
+    p.pop();
   };
 }
