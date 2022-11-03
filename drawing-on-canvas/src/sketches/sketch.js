@@ -36,8 +36,8 @@ export default function Sketch(p) {
     //In this case, I'm mapping the values of the mouse
     //axis to a number between 0 (when close to the edge of the screen)
     // and 500 (when close to the other edge of the screen)
-    const mapX = p.map(p.mouseX, 0, p.width, 0, 500);
-    const mapY = p.map(p.mouseY, 0, p.height, 0, 500);
+    // const mapX = p.map(p.mouseX, 0, p.width, 0, 500);
+    // const mapY = p.map(p.mouseY, 0, p.height, 0, 500);
 
     p.translate(p.width / 2, p.height / 2);
     // p.rect(posX, posY, 500, 500);
